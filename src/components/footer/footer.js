@@ -4,6 +4,7 @@ function Footer() {
         backgroundColor: "#000000",
         color: "#FFFFFF",
         textAlign: "center",
+        margin: "40px 0 0 0",
         padding: "66px 0 29px 0",
         width: "100%",
         height: "140px"
