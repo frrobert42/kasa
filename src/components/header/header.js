@@ -7,22 +7,21 @@ function Header() {
         justifyContent: "space-between",
         alignItems: "center",
         padding: "20px",
-        borderBottom: "1px solid #ccc"
+        margin: "0 auto 20px auto",
+        maxWidth: "1200px",
     };
 
     let menuStyle = {
         display: "flex",
         flexDirection: "row",
-        color: "#000",
         textAlign: "right",
-        fontFamily: "Montserrat",
-        fontSize: "24px",
-        cursor: "pointer",
     }
     let linkStyle = {
         color: "#000",
         textDecoration: "none",
-        marginRight: "20px"
+        fontFamily: "Montserrat",
+        fontSize: "24px",
+        cursor: "pointer",
     };
 
     let aboutStyle = {

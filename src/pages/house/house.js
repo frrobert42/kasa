@@ -1,6 +1,6 @@
 
-function House({props}) {
-    const { id } = props;
+function House({id}) {
+    // const { id } = props;
     return (
         <div>
             <h1>Logement {id}</h1>
