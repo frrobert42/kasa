@@ -36,7 +36,8 @@ function Home() {
         height: "340px",
         borderRadius: "10px",
         background: "linear-gradient(180deg, rgba(255,96,96,1) 0%, rgba(255,96,96,1) 42%, rgba(190,96,96,1) 100%)",
-        cursor: "pointer"
+        cursor: "pointer",
+        textDecoration: "none"
     }
     return (
     <div style={homeStyle}>
