@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import Stars from "../../components/stars/stars";
 import Description from "../../components/description/description";
 import Utility from "../../components/utility/utility";
@@ -9,12 +9,10 @@ function House() {
     const housing = JSON.parse(localStorage.getItem("housing"));
     const house = housing?.find(house => house.id === id);
     console.log('house', house);
+    const navigate = useNavigate();
+
     if (!house) {
-        return (
-            <div>
-                <h1>Logement non trouvé</h1>
-            </div>
-        );
+        navigate('/404');
     }
     return (
         <div style={{maxWidth: "1240px", margin: "0 auto"}}>

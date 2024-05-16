@@ -1,4 +1,5 @@
 function Utility({utilities}) {
+    console.log('utilities', utilities);
     let utilitiesStyle = {
         width: "50%",
         textAlign: "left",
@@ -15,7 +16,7 @@ function Utility({utilities}) {
             <div style={utilitiesStyle}>
                 {
                     utilities?.map((utility, index) => (
-                        <div key={index}>{utility}</div>
+                        <div key={'key : ' + index}>{utility}</div>
                     ))
                 }
             </div>

@@ -1,7 +1,9 @@
 import background from "../../assets/img/home.png";
 import HousingJson from "../../data/logements.json";
+import "./home.scss";
+
 function Home() {
-    let homeStyle = {minHeight: "calc(100vh - 109px - 235px)",};
+    let homeStyle = {minHeight: "calc(100vh - 109px - 235px)"};
     let bannerStyle = {
         backgroundImage: `url(${background})`,
         backgroundSize: "cover",
