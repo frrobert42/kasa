@@ -1,0 +1,21 @@
+.dropdown {
+  margin: 15px 30px;
+  border-radius: 10px 10px 5px 5px;
+  background: var(--Gray, rgba(246, 246, 246, 0.45));
+
+  button {
+    margin: 0;
+    width: 100%;
+    border-radius: 5px;
+    background: var(--Red, #FF6060);
+    color: white;
+    border: #FF6060;
+    cursor: pointer;
+  }
+}
+
+.dropdown-text {
+  color: black;
+  text-align: left;
+  margin: 10px 30px;
+}
