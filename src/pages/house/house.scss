@@ -1,0 +1,62 @@
+.house {
+  max-width: 1240px;
+  margin: 0 auto;
+
+  img.house-img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .house-title {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h1 {
+      color: #FF6060;
+      font-size: 36px;
+      text-align: left;
+      padding-right: 50px;
+      margin-bottom: 0
+    }
+
+    div {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        margin-top: 20px;
+
+      p {
+        color: #FF6060;
+      }
+
+      img {
+        border-radius: 50%;
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .location {
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .house-tags {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+      text-align: left;
+    }
+  }
+
+  .desc-util {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

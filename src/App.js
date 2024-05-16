@@ -9,10 +9,11 @@ import House from "./pages/house/house";
 import HousingJson from "./data/logements.json";
 
 function App() {
-    // if housing is not in local storage, add it
     if (!localStorage.getItem("housing")) {
         localStorage.setItem("housing", JSON.stringify(HousingJson));
     }
+    document.title = "Kasa";
+
     return (
         <div className="App">
             <Header/>

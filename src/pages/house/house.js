@@ -1,3 +1,4 @@
+import "./house.scss";
 import {useNavigate, useParams} from "react-router-dom";
 import Stars from "../../components/stars/stars";
 import Description from "../../components/description/description";
@@ -15,29 +16,27 @@ function House() {
         navigate('/404');
     }
     return (
-        <div style={{maxWidth: "1240px", margin: "0 auto"}}>
-            <img src={house.cover} alt={house.name || 'image maison'} height={"415"} style={{width: "100%", objectFit: "cover"}}/>
-            <div style={{display: "flex", flexWrap: "nowrap", flexDirection: "row", justifyContent: "space-between"}}>
-                <h1 style={{color: "#FF6060", fontFamily: "Montserrat", fontSize: "36px", textAlign: "left", paddingRight: "50px", marginBottom: "0"}}>
-                    {house.title}
-                </h1>
-                <div style={{display: "flex", flexWrap: "nowrap", flexDirection: "row", marginTop: "20px"}}>
-                    <p style={{color: "#FF6060"}}>{house.host.name}</p>
-                    <img src={house.host.picture} alt={house.host.name} style={{borderRadius: "50%", margin: "0 10px"}} width={"64"} height={64}/>
+        <div className={"house"}>
+            <img className={"house-img"} src={house.cover} alt={house.name || 'image maison'} height={"415"}/>
+            <div className={"house-title"}>
+                <h1>{house.title}</h1>
+                <div>
+                    <p>{house.host.name}</p>
+                    <img src={house.host.picture} alt={house.host.name} width={"64"} height={64}/>
                 </div>
             </div>
-            <p style={{textAlign: "left", marginTop: "0"}}>{house.location}</p>
-            <div style={{display: "flex", flexWrap: "nowrap", flexDirection: "row", justifyContent: "space-between"}}>
-                <div style={{textAlign: "left"}}>
+            <p className={"location"}>{house.location}</p>
+            <div className={"house-tags"}>
+                <div>
                     {
                      house.tags.map((tag, index) => (
-                         <Tag key={index} name={tag} />
+                         <Tag key={"tag: " + index} name={tag} />
                      ))
                     }
                 </div>
                 <Stars rate={house.rating}/>
             </div>
-            <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+            <div className={"desc-util"}>
                 <Description description={house.description}/>
                 <Utility utilities={house.equipments}/>
             </div>
