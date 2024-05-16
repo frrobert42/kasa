@@ -43,12 +43,12 @@ function Home() {
     }
     return (
     <div style={homeStyle}>
-        <div style={bannerStyle}>
+        <div id="banner" style={bannerStyle}>
             <h1 style={h1Style}>Chez vous, partout et ailleurs</h1>
         </div>
         <div style={containerStyle}>
         {HousingJson.map((house, index) => (
-            <a style={houseStyle} key={index} href={"/house/" + house.id}>
+            <a style={houseStyle} key={"house: " + index} href={"/house/" + house.id}>
                     <p style={{margin: "268px 20px 20px 20px", color: "#fff", fontStyle: "18px", textAlign: "left"}}>
                         {house.title}
                     </p>
