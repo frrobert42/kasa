@@ -1,7 +1,8 @@
 .dropdown {
-  margin: 15px 30px;
+  margin: 50px 30px 15px 30px;
   border-radius: 10px 10px 5px 5px;
   background: var(--Gray, rgba(246, 246, 246, 0.45));
+  text-align: left;
 
   button {
     margin: 0;
@@ -11,11 +12,21 @@
     color: white;
     border: #FF6060;
     cursor: pointer;
+
+    p {
+      margin-left: 20px;
+
+      color: #FFF;
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 142.6%;
+    };
   }
 }
 
 .dropdown-text {
   color: black;
   text-align: left;
-  margin: 10px 30px;
+  margin: 20px 40px;
 }

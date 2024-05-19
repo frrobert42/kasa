@@ -1,10 +1,24 @@
-#banner {
-  background-image: url("../../assets/img/about.png");
+#banner-about {
+  background-image: url("../../assets/img/about.jpeg") !important;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 223px;
-  max-width: 1240px;
+  height: 223px !important;
+  max-width: 1240px !important;
   width: 100%;
   margin: 0 auto 43px auto;
+  filter: brightness(70%);
+  border-radius: 10px;
+
+}
+
+@media (max-width: 768px) {
+  #banner-about {
+    height: 111px !important;
+  }
+}
+
+.dropdown-about {
+  margin: auto;
+  max-width: 1123px;
 }

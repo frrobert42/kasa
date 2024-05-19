@@ -17,11 +17,13 @@ const aboutText = {
 function About() {
     return (
         <>
-            <div id={"banner"}></div>
-            <Dropdown name={"Fiabilité"} text={aboutText.fiabilite}></Dropdown>
-            <Dropdown name={"Respect"} text={aboutText.respect}></Dropdown>
-            <Dropdown name={"Service"} text={aboutText.service}></Dropdown>
-            <Dropdown name={"Sécurité"} text={aboutText.securite}></Dropdown>
+            <div id={"banner-about"}></div>
+            <div className={"dropdown-about"}>
+                <Dropdown name={"Fiabilité"} text={aboutText.fiabilite}></Dropdown>
+                <Dropdown name={"Respect"} text={aboutText.respect}></Dropdown>
+                <Dropdown name={"Service"} text={aboutText.service}></Dropdown>
+                <Dropdown name={"Sécurité"} text={aboutText.securite}></Dropdown>
+            </div>
         </>
 
     );

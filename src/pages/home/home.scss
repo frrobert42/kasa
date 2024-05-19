@@ -1,24 +1,24 @@
 #banner {
-  background-image: url("../../assets/img/home.png");
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../../assets/img/home.jpeg");
+
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: auto;
-  min-height: 111px;
+  height: 223px;
   max-width: 1240px;
-  width: calc(100% - 40px);
+  width: 100%;
   margin: 0 auto 43px auto;
   border-radius: 10px;
   border: 1px solid #000;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   h1 {
-    color: #fff;
+    color: white;
     margin: auto;
-
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 48px;
     font-weight: 700;
