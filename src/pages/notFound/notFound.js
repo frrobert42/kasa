@@ -1,4 +1,3 @@
-import About from "../about/about";
 
 function NotFound() {
   return (
