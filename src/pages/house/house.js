@@ -4,17 +4,19 @@ import Stars from "../../components/stars/stars";
 import Description from "../../components/description/description";
 import Utility from "../../components/utility/utility";
 import Tag from "../../components/tag/tag";
+import NotFound from "../notFound/notFound";
 
 function House() {
     const { id } = useParams();
     const housing = JSON.parse(localStorage.getItem("housing"));
     const house = housing?.find(house => house.id === id);
-    console.log('house', house);
-    const navigate = useNavigate();
 
     if (!house) {
-        navigate('/404');
+        return (
+            <NotFound></NotFound>
+        )
     }
+
     return (
         <div className={"house"}>
             <img className={"house-img"} src={house.cover} alt={house.name || 'image maison'} height={"415"}/>
