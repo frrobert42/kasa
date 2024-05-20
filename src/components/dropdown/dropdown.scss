@@ -3,7 +3,7 @@
   border-radius: 10px 10px 5px 5px;
   background: var(--Gray, rgba(246, 246, 246, 0.45));
   text-align: left;
-
+  width: 100%;
 
   button {
     margin: 0;
@@ -31,12 +31,16 @@
 
     img {
       margin-right: 20px;
+      transition: transform 0.5s;
     }
   }
 }
 
 .dropdown-text {
-  color: black;
-  text-align: left;
   margin: 20px 40px;
+}
+
+ul {
+    list-style-type: none;
+  padding: 0;
 }

@@ -1,10 +1,9 @@
 import "./house.scss";
-import {useNavigate, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import Stars from "../../components/stars/stars";
-import Description from "../../components/description/description";
-import Utility from "../../components/utility/utility";
 import Tag from "../../components/tag/tag";
 import NotFound from "../notFound/notFound";
+import Dropdown from "../../components/dropdown/dropdown";
 
 function House() {
     const { id } = useParams();
@@ -19,28 +18,31 @@ function House() {
 
     return (
         <div className={"house"}>
-            <img className={"house-img"} src={house.cover} alt={house.name || 'image maison'} height={"415"}/>
-            <div className={"house-title"}>
-                <h1>{house.title}</h1>
-                <div>
-                    <p>{house.host.name}</p>
-                    <img src={house.host.picture} alt={house.host.name} width={"64"} height={64}/>
+            <section className={"house-section"}>
+                <img className={"house-img"} src={house.cover} alt={house.name || 'image maison'} height={"415"}/>
+                <div className={"house-title"}>
+                    <h1>{house.title}</h1>
+                    <div>
+                        <p>{house.host.name}</p>
+                        <img src={house.host.picture} alt={house.host.name} width={"64"} height={64}/>
+                    </div>
                 </div>
-            </div>
-            <p className={"location"}>{house.location}</p>
-            <div className={"house-tags"}>
-                <div>
-                    {
-                     house.tags.map((tag, index) => (
-                         <Tag key={"tag: " + index} name={tag} />
-                     ))
-                    }
+                <p className={"location"}>{house.location}</p>
+                <div className={"house-tags"}>
+                    <div>
+                        {
+                         house.tags.map((tag, index) => (
+                             <Tag key={"tag: " + index} name={tag} />
+                         ))
+                        }
+                    </div>
+                    <Stars rate={house.rating}/>
                 </div>
-                <Stars rate={house.rating}/>
-            </div>
+            </section>
+
             <div className={"desc-util"}>
-                <Description description={house.description}/>
-                <Utility utilities={house.equipments}/>
+                <Dropdown name={"Description"} text={house.description} />
+                <Dropdown name={"Équipements"} text={house.equipments} utility={true}/>
             </div>
         </div>
     );
