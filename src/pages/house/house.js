@@ -4,11 +4,13 @@ import Stars from "../../components/stars/stars";
 import Tag from "../../components/tag/tag";
 import NotFound from "../notFound/notFound";
 import Dropdown from "../../components/dropdown/dropdown";
+import Carousel from "../../components/carousel/carousel";
 
 function House() {
     const { id } = useParams();
     const housing = JSON.parse(localStorage.getItem("housing"));
     const house = housing?.find(house => house.id === id);
+    console.log(house);
 
     if (!house) {
         return (
@@ -19,7 +21,7 @@ function House() {
     return (
         <div className={"house"}>
             <section className={"house-section"}>
-                <img className={"house-img"} src={house.cover} alt={house.name || 'image maison'} height={"415"}/>
+                <Carousel images={house.pictures}/>
                 <div className={"house-title"}>
                     <h1>{house.title}</h1>
                     <div>
@@ -42,7 +44,7 @@ function House() {
 
             <div className={"desc-util"}>
                 <Dropdown name={"Description"} text={house.description} />
-                <Dropdown name={"Équipements"} text={house.equipments} utility={true}/>
+                <Dropdown name={"Équipements"} text={""} utility={house.equipments}/>
             </div>
         </div>
     );

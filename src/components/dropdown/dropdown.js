@@ -5,7 +5,7 @@ import arrow from "../../assets/img/arrow.svg";
 
 function Dropdown(props) {
     const [show, setShow] = useState(false);
-    const { name, text, utility = false } = props;
+    const { name, text, utility } = props;
 
     function showContent() {
        setShow(!show);
@@ -24,7 +24,7 @@ function Dropdown(props) {
             }
             {show && utility &&
                 <ul id={name} className={"dropdown-text"}>
-                    {text.map((item, index) => (
+                    {utility.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}
                 </ul>
