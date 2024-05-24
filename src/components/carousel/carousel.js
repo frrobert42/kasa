@@ -3,10 +3,11 @@ import "./carousel.scss";
 import {useState} from "react";
 import previous from "../../assets/img/previous.svg";
 import next from "../../assets/img/next.png";
+import PropTypes from "prop-types";
 
 export default function Carousel({images}) {
     const [index, setIndex] = useState(0);
-    const length = 3;
+    const length = images?.length;
 
     const handlePrevious = () => {
         const newIndex = index - 1;
@@ -20,10 +21,20 @@ export default function Carousel({images}) {
 
     console.log(images);
     return (
-        <div className="carousel">
-            <img onClick={handlePrevious}src={previous} alt="previous"/>
-            <img src={images[index]} alt={"carousel"} width={"auto"} height={415}/>
-            <img onClick={handleNext} src={next} alt="next"/>
-        </div>
+        <>
+            <div className="carousel" style={{backgroundImage: `url(${images[index]})`}}>
+                <button onClick={handlePrevious}>
+                    <img src={previous} alt={"previous"}/>
+                </button>
+                <button onClick={handleNext}>
+                    <img src={next} alt={"next"}/>
+                </button>
+            </div>
+            <span className={"carousel-index"}>{index+1} / {images.length}</span>
+        </>
     );
 }
+
+Carousel.propTypes = {
+    images: PropTypes.array.isRequired,
+};

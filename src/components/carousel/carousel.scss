@@ -1,0 +1,25 @@
+.carousel {
+  border-radius: 25px;
+  height: 415px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel button {
+  border: none;
+  border-radius: 25px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.carousel-index {
+  z-index: 9;
+  position: relative;
+  top: -40px;
+  color: white;
+  font-size: 18px;
+}
