@@ -24,10 +24,10 @@ export default function Carousel({images}) {
         <>
             <div className="carousel" style={{backgroundImage: `url(${images[index]})`}}>
                 <button onClick={handlePrevious}>
-                    <img src={previous} alt={"previous"}/>
+                    <img src={previous || undefined} alt={"previous"}/>
                 </button>
                 <button onClick={handleNext}>
-                    <img src={next} alt={"next"}/>
+                    <img src={next || undefined} alt={"next"}/>
                 </button>
             </div>
             <span className={"carousel-index"}>{index+1} / {images.length}</span>
