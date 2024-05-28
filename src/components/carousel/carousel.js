@@ -6,20 +6,21 @@ import next from "../../assets/img/next.png";
 import PropTypes from "prop-types";
 
 export default function Carousel({images}) {
+    // The index of the current image
     const [index, setIndex] = useState(0);
     const length = images?.length;
 
+    // Handle the previous and next buttons
     const handlePrevious = () => {
         const newIndex = index - 1;
         setIndex(newIndex < 0 ? length - 1 : newIndex);
     };
-
     const handleNext = () => {
         const newIndex = index + 1;
         setIndex(newIndex >= length ? 0 : newIndex);
     };
 
-    console.log(images);
+    // Display the carousel
     return (
         <>
             <div className="carousel" style={{backgroundImage: `url(${images[index]})`}}>

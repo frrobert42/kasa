@@ -28,6 +28,7 @@
 
 #home {
   min-height: calc(100vh - 109px - 235px);
+  padding: 0 15px;
 }
 
 #house-container {
@@ -75,6 +76,17 @@
       line-height: 100%;
       width: 75%;
       text-align: left;
+    }
+  }
+
+  #house-container {
+    padding: 0;
+    a {
+      width: 335px;
+      height: 255px;
+      p {
+        margin-top: 170px;
+      }
     }
   }
 }

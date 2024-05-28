@@ -44,3 +44,9 @@ ul {
     list-style-type: none;
   padding: 0;
 }
+
+@media screen and (max-width: 600px) {
+  .dropdown {
+    width: auto;
+  }
+}

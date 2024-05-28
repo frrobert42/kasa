@@ -1,6 +1,7 @@
 import "./about.scss";
 import Dropdown from "../../components/dropdown/dropdown";
 
+// About text
 const aboutText = {
     fiabilite: "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux " +
         "logements, et toutes les informations sont régulièrement vérifiées par nos équipes",
@@ -15,10 +16,12 @@ const aboutText = {
 }
 
 function About() {
+    // Display the about page
     return (
         <>
             <div id={"banner-about"}></div>
             <div className={"dropdown-about"}>
+                {/* Display all dropdowns */}
                 <Dropdown name={"Fiabilité"} text={aboutText.fiabilite}></Dropdown>
                 <Dropdown name={"Respect"} text={aboutText.respect}></Dropdown>
                 <Dropdown name={"Service"} text={aboutText.service}></Dropdown>

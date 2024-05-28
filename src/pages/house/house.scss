@@ -9,38 +9,24 @@
 
   .house-title {
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-
-    h1 {
-      color: #FF6060;
-      font-size: 36px;
-      text-align: left;
-      padding-right: 50px;
-      margin-bottom: 0
-    }
-
-    div {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        margin-top: 20px;
-
-      p {
-        color: #FF6060;
-      }
-
-      img {
-        border-radius: 50%;
-        margin: 0 10px;
-      }
-    }
+    flex-direction: column;
+    justify-content: start;
+    width: 75%;
   }
+
+  h1 {
+    color: #FF6060;
+    font-size: 36px;
+    text-align: left;
+    padding-right: 50px;
+    margin-bottom: 0
+  }
+
 
   .location {
     text-align: left;
     margin-top: 0;
+    color: black;
   }
 
   .house-tags {
@@ -48,6 +34,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 20px;
 
     div {
       text-align: left;
@@ -64,3 +51,95 @@
 .house-section {
   margin: auto 30px;
 }
+
+@media screen and (max-width: 600px) {
+  .desc-util {
+    flex-direction: column !important;
+    justify-content: space-between;
+  }
+}
+
+.house-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+
+.house-host {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  p {
+    color: #FF6060;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 142.6%;
+    width: 50%;
+    margin-right: 10px;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.stars {
+  margin-top: 20px;
+}
+
+.house-host-stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// media queries
+@media screen and (max-width: 600px) {
+  .house-section {
+    margin: auto 20px;
+  }
+
+  .location {
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 142.6%; /* 19.964px */
+  }
+
+  .house-details {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .house-host-stars {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse !important;
+  }
+
+  .house-host {
+    width: 100%;
+    justify-content: end;
+
+    img {
+      width: 32px;
+      height: 32px;
+      margin: auto 0;
+    }
+  }
+
+  .house-title h1 {
+    margin-top: -10px !important;
+    color: #FF6060;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 142.6%; /* 25.668px */
+  }
+}
+
+

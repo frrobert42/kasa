@@ -1,6 +1,7 @@
 import "./notFound.scss";
 
 function NotFound() {
+    // Display a 404 page
   return (
     <div className={"not-found"}>
         <h1>404</h1>

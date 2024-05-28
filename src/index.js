@@ -12,6 +12,7 @@ import House from "./pages/house/house";
 import About from "./pages/about/about";
 import NotFound from "./pages/notFound/notFound";
 
+// Create the router
 const router = createBrowserRouter([
     {
         path: "*",
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
     }
 ]);
 
+// Render the router
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

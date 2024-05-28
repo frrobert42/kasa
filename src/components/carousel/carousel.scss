@@ -23,3 +23,16 @@
   color: white;
   font-size: 18px;
 }
+
+// media queries
+@media screen and (max-width: 600px) {
+  .carousel {
+    width: 335px;
+    height: 255px;
+  }
+
+  button img {
+    width: 24px;
+    height: 24px;
+  }
+}
