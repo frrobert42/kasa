@@ -1,5 +1,5 @@
 .house {
-  max-width: 1240px;
+  max-width: 1300px;
   margin: 0 auto;
 
   img.house-img {
@@ -52,7 +52,7 @@
   margin: auto 30px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .desc-util {
     flex-direction: column !important;
     justify-content: space-between;
@@ -93,13 +93,13 @@
 
 .house-host-stars {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
 // media queries
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .house-section {
     margin: auto 20px;
   }
@@ -120,17 +120,27 @@
     width: 100%;
     display: flex;
     flex-direction: row-reverse !important;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .house-host {
     width: 100%;
     justify-content: end;
 
+    p {
+      max-width: 95px;
+    }
+
     img {
       width: 32px;
       height: 32px;
       margin: auto 0;
     }
+  }
+
+  .house-title {
+    width: 100% !important;
   }
 
   .house-title h1 {

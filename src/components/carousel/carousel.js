@@ -22,18 +22,25 @@ export default function Carousel({images}) {
 
     // Display the carousel
     return (
-        <>
-            <div className="carousel" style={{backgroundImage: `url(${images[index]})`}}>
-                <button onClick={handlePrevious}>
-                    <img src={previous || undefined} alt={"previous"}/>
-                </button>
-                <button onClick={handleNext}>
-                    <img src={next || undefined} alt={"next"}/>
-                </button>
-            </div>
-            <span className={"carousel-index"}>{index+1} / {images.length}</span>
-        </>
-    );
+        <div className="carousel" style={{backgroundImage: `url(${images[index]})`}}>
+            {length > 1 &&
+                <div className={"carousel-col"}>
+                    <div className={"carousel-row"}>
+                        <button onClick={handlePrevious}>
+                            <img src={previous || undefined} alt={"previous"}/>
+                        </button>
+
+                        <button onClick={handleNext}>
+                            <img src={next || undefined} alt={"next"}/>
+                        </button>
+                    </div>
+                    <span className={"carousel-index"}>{index + 1} / {images.length}</span>
+                </div>
+}
+</div>
+
+)
+    ;
 }
 
 Carousel.propTypes = {
