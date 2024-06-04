@@ -2,7 +2,7 @@
 import "./carousel.scss";
 import {useState} from "react";
 import previous from "../../assets/img/previous.svg";
-import next from "../../assets/img/next.png";
+import next from "../../assets/img/next.svg";
 import PropTypes from "prop-types";
 
 export default function Carousel({images}) {

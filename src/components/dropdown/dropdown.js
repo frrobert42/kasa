@@ -41,6 +41,7 @@ function Dropdown(props) {
 Dropdown.propTypes = {
     name: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
+    utility: PropTypes.bool
 };
 
 export default Dropdown;
