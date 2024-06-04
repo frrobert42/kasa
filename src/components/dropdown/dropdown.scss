@@ -23,8 +23,23 @@
   }
 }
 
+.house {
+  .dropdown {
+    margin: 15px auto !important;
+    max-width: 582px;
+    width: 85%;
+  }
+}
+
+.dropdown-about {
+  .dropdown {
+    margin: 30px auto;
+    max-width: 1023px;
+    width: 95%;
+  }
+}
+
 .dropdown {
-  margin: 0 30px 15px 30px;
   border-radius: 10px 10px 5px 5px;
   background: var(--Gray, rgba(246, 246, 246, 0.45));
   text-align: left;
