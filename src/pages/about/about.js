@@ -1,5 +1,6 @@
 import "./about.scss";
 import Dropdown from "../../components/dropdown/dropdown";
+import Banner from "../../components/banner/banner";
 
 // About text
 const aboutText = {
@@ -19,7 +20,7 @@ function About() {
     // Display the about page
     return (
         <>
-            <div id={"banner-about"}></div>
+            <Banner imageClassName={"about-banner"} />
             <div className={"dropdown-about"}>
                 {/* Display all dropdowns */}
                 <Dropdown name={"Fiabilité"} text={aboutText.fiabilite}></Dropdown>

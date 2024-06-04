@@ -1,6 +1,6 @@
 import './App.scss';
 import Header from "./components/header/header";
-import {Route, Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Footer from "./components/footer/footer";
 import About from "./pages/about/about";
 import Home from "./pages/home/home";
@@ -19,12 +19,14 @@ function App() {
     return (
         <div className="App">
             <Header/>
-            <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/about' element={<About/>}/>
-                <Route path='/house/:id' element={<House />}/>
-                <Route path="/*" element={<NotFound/>}/>
-            </Routes>
+            <Router>
+                <Routes>
+                    <Route path='/' element={<Home/>}/>
+                    <Route path='/about' element={<About/>}/>
+                    <Route path='/house/:id' element={<House />}/>
+                    <Route path="/*" element={<NotFound/>}/>
+                </Routes>
+            </Router>
             <Footer/>
         </div>
     );

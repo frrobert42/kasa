@@ -34,7 +34,7 @@
 .carousel-index {
   z-index: 9;
   position: relative;
-  top: -40px;
+  top: -20px;
   color: white;
   font-size: 18px;
 }
@@ -48,5 +48,9 @@
   button img {
     width: 24px;
     height: 24px;
+  }
+
+  .carousel-index {
+    top: -10px;
   }
 }

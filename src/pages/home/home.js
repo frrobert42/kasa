@@ -1,13 +1,14 @@
 import HousingJson from "../../data/logements.json";
 import "./home.scss";
+import Banner from "../../components/banner/banner";
 
 function Home() {
     // Display the home page
     return (
     <div id={"home"}>
-        <div id="banner">
-            <h1>Chez vous, partout et ailleurs</h1>
-        </div>
+
+        <Banner title={"Chez vous, partout et ailleurs"} imageClassName={"home-banner"} />
+
         <div id={"house-container"}>
         {/* Display all houses */}
         {HousingJson.map((house, index) => (

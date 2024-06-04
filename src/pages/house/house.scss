@@ -1,5 +1,6 @@
 .house {
   max-width: 1300px;
+  min-height: calc(100vh - 300px);
   margin: 0 auto;
 
   img.house-img {
@@ -21,7 +22,6 @@
     padding-right: 50px;
     margin-bottom: 0
   }
-
 
   .location {
     text-align: left;
@@ -45,6 +45,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 20px;
+
+    div {
+      width: 50%;
+    }
   }
 }
 
@@ -52,10 +57,15 @@
   margin: auto 30px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
   .desc-util {
     flex-direction: column !important;
     justify-content: space-between;
+    margin-top: 10px;
+
+    div {
+      width: calc(100% - 60px) !important;
+    }
   }
 }
 
@@ -64,6 +74,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: baseline;
+  margin-top: 20px;
 }
 
 
@@ -75,7 +86,7 @@
   p {
     color: #FF6060;
     text-align: right;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 142.6%;
     width: 50%;
@@ -99,7 +110,7 @@
 }
 
 // media queries
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
   .house-section {
     margin: auto 20px;
   }
@@ -129,7 +140,7 @@
     justify-content: end;
 
     p {
-      max-width: 95px;
+      max-width: 80px;
     }
 
     img {

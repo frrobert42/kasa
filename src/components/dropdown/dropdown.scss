@@ -24,7 +24,7 @@
 }
 
 .dropdown {
-  margin: 50px 30px 15px 30px;
+  margin: 0 30px 15px 30px;
   border-radius: 10px 10px 5px 5px;
   background: var(--Gray, rgba(246, 246, 246, 0.45));
   text-align: left;
@@ -33,7 +33,7 @@
   button {
     margin: 0;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
     background: var(--Red, #FF6060);
     color: white;
     border: #FF6060;
