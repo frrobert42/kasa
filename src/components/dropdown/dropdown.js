@@ -10,7 +10,12 @@ function Dropdown(props) {
     function showContent() {
        setShow(!show);
        const arrow = document.querySelector(".arrow" + name);
-        show ? arrow.style.transform = "rotate(0deg)" : arrow.style.transform = "rotate(-180deg)";
+        if (show) {
+            arrow.style.transform = "rotate(0deg)";
+            //  arrow.style.transform = "rotate(-180deg)"
+        } else {
+            arrow.style.transform = "rotate(-180deg)";
+        }
     }
 
     return (
@@ -19,11 +24,11 @@ function Dropdown(props) {
                 <p>{name}</p>
                 <img src={arrow} alt={"arrow"} className={"arrow" + name}/>
             </button>
-            {show && !utility &&
-                <p id={name} className={"dropdown-text"}>{text}</p>
+            {!utility &&
+                <p id={name} className={"dropdown-text " + show}>{text}</p>
             }
-            {show && utility &&
-                <ul id={name} className={"dropdown-text"}>
+            {utility &&
+                <ul id={name} className={"dropdown-text " + show}>
                     {utility.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}
