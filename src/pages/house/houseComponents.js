@@ -5,20 +5,19 @@ import Tag from "../../components/tag/tag";
 import NotFound from "../notFound/notFound";
 import Dropdown from "../../components/dropdown/dropdown";
 import Carousel from "../../components/carousel/carousel";
+import {House} from "../../data/houseModel";
 
-function House() {
+function HouseComponents() {
     // Get the id from the URL
     const { id } = useParams();
     // Get the housing from the local storage
     const housing = JSON.parse(localStorage.getItem("housing"));
-    // Find the house with the id
-    const house = housing?.find(house => house.id === id);
+    // Find the house with the id and create a new house object
+    const house = new House(housing?.find(house => house.id === id));
 
     // If the house is not found, display a 404 page
     if (!house) {
-        return (
-            <NotFound></NotFound>
-        )
+        return <NotFound />
     }
 
     return (
@@ -37,9 +36,9 @@ function House() {
                             <div className={"house-tags"}>
                                 <div>
                                     {/* Display all tags */}
-                                    {
-                                        house.tags.map((tag, index) => (
-                                            <Tag key={"tag: " + index} name={tag}/>
+                                    {house?.tags?.length &&
+                                        house.tags.map((tagName, index) => (
+                                            <Tag key={"tag: " + index} name={tagName}/>
                                         ))
                                     }
                                 </div>
@@ -72,4 +71,4 @@ function House() {
     );
 }
 
-export default House;
+export default HouseComponents;

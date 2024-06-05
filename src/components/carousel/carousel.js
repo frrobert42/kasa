@@ -23,7 +23,8 @@ export default function Carousel({images}) {
     // Display the carousel
     return (
         <div className="carousel" style={{backgroundImage: `url(${images[index]})`}}>
-            {length > 1 &&
+            { // Display the previous and next buttons if there are more than one image
+                length > 1 &&
                 <div className={"carousel-col"}>
                     <div className={"carousel-row"}>
                         <button onClick={handlePrevious}>
@@ -36,7 +37,7 @@ export default function Carousel({images}) {
                     </div>
                     <span className={"carousel-index"}>{index + 1} / {images.length}</span>
                 </div>
-}
+            }
 </div>
 
 )

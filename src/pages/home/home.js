@@ -12,7 +12,8 @@ function Home() {
         <div id={"house-container"}>
         {/* Display all houses */}
         {HousingJson.map((house, index) => (
-            <a key={"house: " + index} href={"/house/" + house.id}
+            <a key={"house: " + index}
+               href={"/house/" + house.id}
                style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), url(${house.cover})`}}>
                     <p>{house.title}</p>
             </a>

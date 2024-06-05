@@ -10,19 +10,16 @@ function Dropdown(props) {
     function showContent() {
        setShow(!show);
        const arrow = document.querySelector(".arrow" + name);
-        if (show) {
-            arrow.style.transform = "rotate(0deg)";
-            //  arrow.style.transform = "rotate(-180deg)"
-        } else {
-            arrow.style.transform = "rotate(-180deg)";
-        }
+        // Rotate arrow
+        if (show) arrow.style.transform = "rotate(0deg)";
+        else arrow.style.transform = "rotate(-180deg)";
     }
 
     return (
         <div className={"dropdown"}>
             <button onClick={() => showContent()} className={"dropdown"}>
                 <p>{name}</p>
-                <img src={arrow} alt={"arrow"} className={"arrow" + name}/>
+                <img src={arrow || undefined} alt={"arrow"} className={"arrow" + name}/>
             </button>
             {!utility &&
                 <p id={name} className={"dropdown-text " + show}>{text}</p>
@@ -30,7 +27,7 @@ function Dropdown(props) {
             {utility &&
                 <ul id={name} className={"dropdown-text " + show}>
                     {utility.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={"utility-" + index}>{item}</li>
                     ))}
                 </ul>
             }
@@ -41,7 +38,7 @@ function Dropdown(props) {
 Dropdown.propTypes = {
     name: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    utility: PropTypes.bool
+    utility: PropTypes.array
 };
 
 export default Dropdown;

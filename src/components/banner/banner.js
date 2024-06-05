@@ -4,9 +4,7 @@ import PropTypes from "prop-types";
 export default function Banner({title, imageClassName}) {
     return (
         <div id={"banner"} className={imageClassName}>
-            {title &&
                 <h1>{title}</h1>
-            }
         </div>
 );
 }
