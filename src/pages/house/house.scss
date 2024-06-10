@@ -59,12 +59,11 @@
 
 @media screen and (max-width: 600px) {
   .desc-util {
-    flex-direction: column !important;
-    justify-content: space-between;
-    margin-top: 10px;
+    display: block !important;
+    margin-top: 0 !important;
 
     div {
-      width: calc(100% - 60px) !important;
+      width: calc(100% - 40px) !important;
     }
   }
 }

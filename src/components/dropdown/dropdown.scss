@@ -1,17 +1,20 @@
 @media screen and (max-width: 600px) {
   .dropdown {
-    width: auto;
+    width: 100% !important;
   }
 
   button.dropdown {
     height: 32px;
     p {
-      color: #FFF;
-      font-family: Montserrat, sans-serif;
-      font-size: 13px;
+      font-size: 13px !important;
       font-style: normal;
-      font-weight: 700;
-      line-height: 142.6%;
+    }
+  }
+
+  .dropdown-about {
+    .dropdown {
+      margin: 10px auto !important;
+      width: 100% !important;
     }
   }
 
@@ -26,7 +29,6 @@
 .house {
   .dropdown {
     margin: 15px auto !important;
-    max-width: 582px;
     width: 85%;
   }
 }
