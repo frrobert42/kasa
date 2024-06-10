@@ -13,7 +13,10 @@ function HouseComponents() {
     // Get the housing from the local storage
     const housing = JSON.parse(localStorage.getItem("housing"));
     // Find the house with the id and create a new house object
-    const house = new House(housing?.find(house => house.id === id));
+    let house;
+    if (housing?.find(house => house.id === id)) {
+        house = new House(housing?.find(house => house.id === id));
+    }
 
     // If the house is not found, display a 404 page
     if (!house) {
